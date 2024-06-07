@@ -1,0 +1,9 @@
+
+.navbar{
+    background: linear-gradient(to right, rgb(236, 162, 175),rgb(205, 139, 205));
+}
+    
+.nav-item{
+    font-size: large;
+    font-weight: 700;
+}

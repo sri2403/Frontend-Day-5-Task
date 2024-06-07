@@ -1,0 +1,22 @@
+.heading {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    margin-top: 150px;
+}
+p{
+    font-size: 20px;
+    color: black;
+    text-align: center;
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+}
