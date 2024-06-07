@@ -23,4 +23,6 @@ The ForgotPassword component handles password reset requests. It contains a form
 
 ## Output
 
-Netlify link=>
+Netlify link=>https://frontend-day5-task-sri2403.netlify.app/
+
+backend code=>[click here](https://github.com/sri2403/Backend-Day-5-Task.git)
