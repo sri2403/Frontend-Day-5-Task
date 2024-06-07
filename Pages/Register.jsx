@@ -15,7 +15,7 @@ const Register = () => {
 
         const payload={username,email,password}
 
-        await axios.post("http://localhost:5000/api/register",payload)
+        await axios.post("https://frontend-day5-task-sri2403.netlify.app/api/register",payload)
        .then((res)=>setMsg(res.data.message))
        .catch((error)=>{
         console.log(error)

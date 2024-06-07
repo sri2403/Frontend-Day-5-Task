@@ -13,7 +13,7 @@ const Login = () => {
 
         const payload={email,password}
 
-        await axios.post("http://localhost:5000/api/login",payload)
+        await axios.post("hhttps://frontend-day5-task-sri2403.netlify.app/api/login",payload)
        .then((res)=>setMsg(res.data.message))
        .catch((err)=>{
         console.log(err)

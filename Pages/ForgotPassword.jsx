@@ -12,7 +12,7 @@ const ForgotPassword = () => {
 
         const payload={email}
 
-        await axios.post("http://localhost:5000/api/forgot-password", payload)
+        await axios.post("https://frontend-day5-task-sri2403.netlify.app//api/forgot-password", payload)
         .then((res) => {
             setMsg(res.data.message);
         })
