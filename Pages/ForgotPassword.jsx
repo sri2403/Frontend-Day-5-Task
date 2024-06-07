@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "./fp.css";
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const ForgotPassword = () => {
     const[email,setEmail]=useState("")
@@ -15,13 +15,18 @@ const ForgotPassword = () => {
         await axios.post("https://backend-day-5-task.onrender.com/api/forgot-password", payload)
         .then((res) => {
             setMsg(res.data.message);
+            setTimeout(() => {
+                navigate("/login")
+            }, 3000);
         })
         .catch((err) => {
             console.log(err);
             setMsg("Invalid credentials..!");
-            setEmail("")
+            setTimeout(() => {
+                setMsg("")
+                setEmail("")
+            }, 3000);
         });
-    
     }
     return (
         <div className=' container p-5 mt-5'>
@@ -36,8 +41,8 @@ const ForgotPassword = () => {
             <button className="btn btn-primary btn-block mt-3" type='submit' >Submit</button>
             </div>
             <h6 className='text-center'>{msg}</h6>
-            <div className='text-center'>
-            <button onClick={()=>navigate("/login")} className='btn btn-warning'>Login</button>
+            <div className='text-end'>
+            <Link to="/login">Back</Link>
             </div>
             </form>
         </div>
